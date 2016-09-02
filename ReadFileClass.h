@@ -6,6 +6,21 @@
 #include <fstream>
 using namespace std;
 
+class Read
+{
+   private: 
+      ifstream inputFile;
+      bool eof;
+      bool closed;
+   public:
+      Read(const char* fileName);
+      ~Read();
+      String* readline();
+      bool eof();
+      void close();
+};
+
+/*
 struct ReadFile
 {
    ifstream input_file;
@@ -18,5 +33,5 @@ void destroyReadFile(ReadFile* rf);
 String* readLine(ReadFile* rf);
 bool eof(ReadFile* rf);
 void close(ReadFile* rf);
-
+*/
 #endif
